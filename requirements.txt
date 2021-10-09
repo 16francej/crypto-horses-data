@@ -11,7 +11,9 @@ charset-normalizer==2.0.6
 cytoolz==0.11.0
 dj-database-url==0.5.0
 Django==3.2.8
+django-filter==21.1
 django-heroku==0.3.1
+djangorestframework==3.12.4
 eth-abi==2.1.1
 eth-account==0.5.5
 eth-hash==0.3.2
@@ -26,6 +28,7 @@ idna==3.2
 ipfshttpclient==0.8.0a2
 jsonschema==3.2.0
 lru-dict==1.1.7
+Markdown==3.3.4
 multiaddr==0.0.9
 multidict==5.1.0
 netaddr==0.8.0

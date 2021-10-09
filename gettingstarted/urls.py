@@ -1,11 +1,11 @@
 from django.urls import path, include
-
-from django.contrib import admin
-
-admin.autodiscover()
-
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
 import hello.views
 
+
+router = routers.DefaultRouter()
+router.register(r'users', UserViewSet)
 # To add a new path, first import the app:
 # import blog
 #
@@ -15,7 +15,6 @@ import hello.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    path("", hello.views.index, name="index"),
-    path("db/", hello.views.db, name="db"),
-    path("admin/", admin.site.urls),
+    path("", include(router.urls)),
+    path('api-auth/', include('rest_framework.urls'))
 ]
