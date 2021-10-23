@@ -1,11 +1,12 @@
 from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-import hello.views
+from hello.views import UserViewSet, HorseViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'users', UserViewSet)
+router.register(r'horses', HorseViewSet)
 # To add a new path, first import the app:
 # import blog
 #
